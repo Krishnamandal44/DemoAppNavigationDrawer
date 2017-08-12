@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--Navigation Header-->
+    <RelativeLayout
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorWhite">
+        <Button
+            android:id="@+id/navicon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="9dp"
+            android:background="@drawable/ic_drawer" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/fikarrnot_logo_small"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="#ffffff"
+                    android:textSize="22sp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/popup"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:padding="7dp">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:background="@drawable/ic_search"
+                android:clickable="false"
+                android:gravity="center" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_wallet"
+                android:clickable="false"
+                android:gravity="center" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <!--Navigation Side Bar-->
+        <android.support.v4.widget.DrawerLayout
+            android:id="@+id/drawerlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            >
+
+            <LinearLayout
+                android:id="@+id/navdrawer"
+                android:layout_width="220dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorGray"
+                android:layout_gravity="start"
+                android:clickable="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+                    <!--<ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/noimage"
+                        android:id="@+id/homedashboard">
+                    </ImageView>-->
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/homedashboard"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="9dp"
+                        android:src="@drawable/noimage"
+                        app:civ_border_color="#b7dcdcdc"
+                        app:civ_border_width="2dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/changePassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:elevation="1dp"
+                        android:gravity="center_vertical|left"
+                        android:paddingBottom="7dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="7dp"
+                        android:text="Change Password"
+                        android:textAllCaps="false"
+                        style="@style/TitleTextStyle"
+                        />
+
+                    <TextView
+                        android:id="@+id/termsConditions"
+                        android:elevation="1dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:gravity="center_vertical|left"
+                        android:paddingBottom="7dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="7dp"
+                        android:text="Terms &amp; Condition"
+                        android:textAllCaps="false"
+                        style="@style/TitleTextStyle"
+                        />
+                    <TextView
+                        android:id="@+id/privacyPolicy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:gravity="center_vertical|left"
+                        android:elevation="1dp"
+                        android:paddingBottom="7dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="7dp"
+                        android:text="Privacy &amp; Policy"
+                        android:textAllCaps="false"
+                        style="@style/TitleTextStyle"
+                        />
+                    <TextView
+                        android:id="@+id/refundPolicy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="1dp"
+                        android:layout_marginTop="3dp"
+                        android:gravity="center_vertical|left"
+                        android:paddingBottom="7dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="7dp"
+                        android:text="Refund Policy"
+                        android:textAllCaps="false"
+                        style="@style/TitleTextStyle"
+                        />
+                    <TextView
+                        android:id="@+id/faq"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:gravity="center_vertical|left"
+                        android:paddingBottom="7dp"
+                        android:paddingLeft="30dp"
+                        android:elevation="1dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="7dp"
+                        android:text="FAQs"
+                        android:textAllCaps="false"
+                        style="@style/TitleTextStyle"
+                        />
+                    <TextView
+                        android:id="@+id/contactUs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:gravity="center_vertical|left"
+                        android:paddingBottom="7dp"
+                        android:elevation="1dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="7dp"
+                        android:text="Contact Us"
+                        android:textAllCaps="false"
+                        style="@style/TitleTextStyle"
+                        />
+                    <TextView
+                        android:id="@+id/about"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:gravity="center_vertical|left"
+                        android:paddingBottom="7dp"
+                        android:paddingLeft="30dp"
+                        android:elevation="1dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="7dp"
+                        android:text="About"
+                        android:textAllCaps="false"
+                        style="@style/TitleTextStyle"
+                        />
+                    <TextView
+                        android:id="@+id/logout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:gravity="center_vertical|left"
+                        android:paddingBottom="7dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="7dp"
+                        android:text="Logout"
+                        android:elevation="1dp"
+                        android:textAllCaps="false"
+                        style="@style/TitleTextStyle"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v4.widget.DrawerLayout>
+        
+</RelativeLayout>
+
+</LinearLayout>

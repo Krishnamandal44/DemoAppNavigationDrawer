@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="82dp"
+    android:layout_height="match_parent"
+    android:id="@+id/top_recycler_child_view_id"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    >
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:id="@+id/top_rcv_child_icon"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_home_service_white"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/top_rcv_child_text"
+        android:text="Home Service"
+        android:layout_gravity="center"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/colorTextLight"
+        />
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        />
+
+</LinearLayout>

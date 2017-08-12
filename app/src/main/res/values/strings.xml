@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">DemoAppNavigationDrawer</string>
+
+
+    <style name="TitleTextStyle" parent="android:Widget.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#212121</item>
+    </style>
+
+    <string-array name="main_category">
+        <item>Money Transfer</item>
+        <item>Recharge</item>
+        <item>DTH Recharge</item>
+        <item>Insurance</item>
+        <item>Reminder</item>
+        <item>Online Shopping</item>
+        <item>Online Booking</item>
+        <item>Home Service</item>
+        <item>Ticket Booking</item>
+        <item>Movers Packers</item>
+        <item>Events</item>
+        <item>Beauty &amp; Health</item>
+        <item>Lesson &amp; Hobbies</item>
+        <item>Gift Card</item>
+        <item>Business Service</item>
+    </string-array>
+
+</resources>
